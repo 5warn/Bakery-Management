@@ -7,13 +7,13 @@
 
 /* Body */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Gilroy';
     background-color: #f4f4f4;
 }
 
 /* Header */
 header {
-    background-color: #ff8c00;
+    background-color: #231F20;
     padding: 20px 0;
     text-align: center;
     color: white;
@@ -27,8 +27,16 @@ header nav {
 }
 
 header .logo {
-    font-size: 24px;
-    font-weight: bold;
+    height:50px;
+    width: 70px;
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+    background-image: url("https://i.pinimg.com/736x/9f/8b/d8/9f8bd8b8a775f0a584b412591e2df458.jpg");
+    background-repeat: no-repeat;
+    float: left;
+    align-items: top;
+    /*mix-blend-mode: darken*/;
 }
 
 header .nav-links {
@@ -66,7 +74,7 @@ header .nav-links a {
 
 .hero .btn {
     padding: 15px 30px;
-    background-color: #ff8c00;
+    background-color: #231F20;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -110,7 +118,7 @@ header .nav-links a {
 
 .product-card p {
     font-size: 18px;
-    color: #ff8c00;
+    color: #231F20;
 }
 
 /* Contact Form */
@@ -146,7 +154,7 @@ header .nav-links a {
 }
 
 .contact-form button {
-    background-color: #ff8c00;
+    background-color: #231F20;
     color: white;
     padding: 15px 20px;
     font-size: 18px;
@@ -156,7 +164,7 @@ header .nav-links a {
 }
 
 .contact-form button:hover {
-    background-color: #e67e00;
+    background-color: #231F20;
 }
 
 /* Footer */
@@ -200,7 +208,7 @@ footer {
 }
 
 .auth-form button {
-    background-color: #ff8c00;
+    background-color: #231F20;
     color: white;
     padding: 15px 20px;
     font-size: 18px;
@@ -211,7 +219,7 @@ footer {
 }
 
 .auth-form button:hover {
-    background-color: #e67e00;
+    background-color: #231F20;
 }
 
 .auth-form p {
@@ -220,7 +228,7 @@ footer {
 }
 
 .auth-form a {
-    color: #ff8c00;
+    color: #231F20;
     text-decoration: none;
 }
 
@@ -235,7 +243,7 @@ footer {
 }
 
 .auth-buttons .btn {
-    background-color: #ff8c00;
+    background-color: #231F20;
     color: white;
     padding: 15px 30px;
     margin: 10px;
@@ -246,5 +254,143 @@ footer {
 }
 
 .auth-buttons .btn:hover {
-    background-color: #e67e00;
+    background-color: #231F20;
 }
+
+.dashboard {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sidebar {
+    background-color: #343a40;
+    color: #fff;
+    width: 250px;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    background-color: #6c757d;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .menu {
+    list-style: none;
+  }
+  
+  .menu li {
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .notifications {
+    background-color: #dc3545;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+  
+  .logout {
+    text-decoration: none;
+    color: #343a40;
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .stat {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #495057;
+  }
+  
+  .stat p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 60px;
+      padding: 10px;
+    }
+  
+    .profile {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-img {
+      margin: 0 0 10px 0;
+    }
+  
+    .menu li {
+      font-size: 12px;
+    }
+  
+    .header h1 {
+      font-size: 18px;
+    }
+  
+    .stats {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .stats {
+      grid-template-columns: 1fr;
+    }
+  }
