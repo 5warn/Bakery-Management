@@ -1,0 +1,21 @@
+{% extends "mainpage.html" %}
+{% block main %}
+<h2>Create an Account</h2>
+        <form action="register" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <h1>{{message}}</h1>
+        <p>Already have an account? <a href="sign_in.html">Sign in here</a></p>
+        {% endblock %}
